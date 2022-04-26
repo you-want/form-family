@@ -1,2 +1,2 @@
-# you-want-vue3
-vue3 业务组件库
+# Vue 3 + TypeScript + Vite
+
