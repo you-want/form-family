@@ -19,8 +19,9 @@ const data = reactive({
         v-for="(link, index) in data.links"
         :key="index"
         :to="link.path"
-        >{{ link.name }}</router-link
-      >
+        >
+        {{ link.name }}
+        </router-link>
     </aside>
     <main>
       <router-view></router-view>

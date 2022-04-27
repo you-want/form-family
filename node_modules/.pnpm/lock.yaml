@@ -1,8 +1,11 @@
 lockfileVersion: 5.3
 
 specifiers:
+  '@types/node': ^17.0.29
   '@vitejs/plugin-vue': ^2.3.1
   less: ^4.1.2
+  path: ^0.12.7
+  prismjs: ^1.28.0
   typescript: ^4.5.4
   vite: ^2.9.5
   vite-plugin-md: ^0.13.0
@@ -11,13 +14,16 @@ specifiers:
   vue-tsc: ^0.34.7
 
 dependencies:
+  prismjs: 1.28.0
   vite-plugin-md: 0.13.0_vite@2.9.5
   vue: registry.npmmirror.com/vue/3.2.33
   vue-router: 4.0.14_vue@3.2.33
 
 devDependencies:
+  '@types/node': 17.0.29
   '@vitejs/plugin-vue': 2.3.1_vite@2.9.5+vue@3.2.33
   less: 4.1.2
+  path: 0.12.7
   typescript: registry.npmmirror.com/typescript/4.6.3
   vite: registry.npmmirror.com/vite/2.9.5_less@4.1.2
   vue-tsc: registry.npmmirror.com/vue-tsc/0.34.10_typescript@4.6.3
@@ -55,6 +61,10 @@ packages:
   /@types/mdurl/1.0.2:
     resolution: {integrity: sha512-eC4U9MlIcu2q0KQmXszyn5Akca/0jrQmwDRgpAMJai7qBWq4amIQhZyNau4VYGtCeALvW1/NtjzJJ567aZxfKA==}
     dev: false
+
+  /@types/node/17.0.29:
+    resolution: {integrity: sha512-tx5jMmMFwx7wBwq/V7OohKDVb/JwJU5qCVkeLMh1//xycAJ/ESuw9aJ9SEtlCZDYi2pBfe4JkisSoAtbOsBNAA==}
+    dev: true
 
   /@vitejs/plugin-vue/2.3.1_vite@2.9.5+vue@3.2.33:
     resolution: {integrity: sha512-YNzBt8+jt6bSwpt7LP890U1UcTOIZZxfpE5WOJ638PNxSEKOqAi0+FSKS0nVeukfdZ0Ai/H7AFd6k3hayfGZqQ==}
@@ -451,6 +461,10 @@ packages:
     dev: true
     optional: true
 
+  /inherits/2.0.3:
+    resolution: {integrity: sha1-Yzwsg+PaQqUC9SRmAiSA9CCCYd4=}
+    dev: true
+
   /is-extendable/0.1.1:
     resolution: {integrity: sha1-YrEQ4omkcUGOPsNqYX1HLjAd/Ik=}
     engines: {node: '>=0.10.0'}
@@ -552,6 +566,13 @@ packages:
     engines: {node: '>= 0.10'}
     dev: true
 
+  /path/0.12.7:
+    resolution: {integrity: sha1-1NwqUGxM4hl+tIHr/NWzbAFAsQ8=}
+    dependencies:
+      process: 0.11.10
+      util: 0.10.4
+    dev: true
+
   /picomatch/2.3.1:
     resolution: {integrity: sha512-JU3teHTNjmE2VCGFzuY8EXzCDVwEqB2a8fsIvwaStHhAWJEeVd1o1QD80CU6+ZdEXXSLbSsuLwJjkCBWqRQUVA==}
     engines: {node: '>=8.6'}
@@ -562,6 +583,16 @@ packages:
     engines: {node: '>=6'}
     dev: true
     optional: true
+
+  /prismjs/1.28.0:
+    resolution: {integrity: sha512-8aaXdYvl1F7iC7Xm1spqSaY/OJBpYW3v+KJ+F17iYxvdc8sfjW194COK5wVhMZX45tGteiBQgdvD/nhxcRwylw==}
+    engines: {node: '>=6'}
+    dev: false
+
+  /process/0.11.10:
+    resolution: {integrity: sha1-czIwDoQBYb2j5podHZGn1LwW8YI=}
+    engines: {node: '>= 0.6.0'}
+    dev: true
 
   /prr/1.0.1:
     resolution: {integrity: sha1-0/wRS6BplaRexok/SEzrHXj19HY=}
@@ -615,6 +646,12 @@ packages:
   /uc.micro/1.0.6:
     resolution: {integrity: sha512-8Y75pvTYkLJW2hWQHXxoqRgV7qb9B+9vFEtidML+7koHUFapnVJAZ6cKs+Qjz5Aw3aZWHMC6u0wJE3At+nSGwA==}
     dev: false
+
+  /util/0.10.4:
+    resolution: {integrity: sha512-0Pm9hTQ3se5ll1XihRic3FDIku70C+iHUdT/W926rSgHV5QgXsYbKZN8MSC3tJtSkhuROzvsQjAaFENRXr+19A==}
+    dependencies:
+      inherits: 2.0.3
+    dev: true
 
   /vite-plugin-md/0.13.0_vite@2.9.5:
     resolution: {integrity: sha512-srW6j3otbHxFaTushal6fWxrjrlyA553biB0S1Bpm2DhWL1hP4a/snjpi+5AyDVaQodMmA4Oe2hIW1IjyKa0hQ==}

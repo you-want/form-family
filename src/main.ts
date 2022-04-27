@@ -1,6 +1,13 @@
 import { createApp } from 'vue'
 import App from './App.vue'
-import MyKit from '../packages';
+import router from './router'
 
-createApp(App).use(MyKit).mount('#app')
+import './assets/markdown.css';
+
+import MyKit from '../packages';
+import Preview from './components/Preview.vue';
+
+const app = createApp(App)
+app.component('Preview', Preview)
+app.use(MyKit).use(router).mount('#app')
 
