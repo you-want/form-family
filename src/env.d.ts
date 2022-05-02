@@ -7,8 +7,8 @@ declare module '*.vue' {
   export default component
 }
 
-declare module '*.md' {
-  import { ComponentOptions } from 'vue';
-  const Component: ComponentOptions;
-  export default Component;
+declare module '*.module.less' {
+  const classes: { readonly [key: string]: string };
+  export default classes;
 }
+declare module '*.less'

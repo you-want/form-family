@@ -1,13 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import router from './router'
+import { createApp } from "vue";
+import App from "./App.vue";
+import AntDVue from '../plugins/AntD'
+// import YouWantVue3 from "../packages/index";
+import YouWantVue3 from "../lib/you-want-vue3.es.js";
+import "../lib/style.css";
+import '@/styles/index.less'
 
-import './assets/markdown.css';
-
-import MyKit from '../packages';
-import Preview from './components/Preview.vue';
-
-const app = createApp(App)
-app.component('Preview', Preview)
-app.use(MyKit).use(router).mount('#app')
-
+createApp(App)
+  .use(AntDVue)
+  .use(YouWantVue3)
+  .mount("#app");

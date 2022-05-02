@@ -1,13 +1,19 @@
-import { App, Plugin } from 'vue';
+import type { App } from "vue";
 
-import { ButtonPlugin } from './Button';
+import * as components from "./components";
+export * from "./components";
 
-const MyKitPlugin: Plugin = {
-  install(app: App) {
-    ButtonPlugin.install?.(app);
-  },
+export const install = function (app: App) {
+  Object.keys(components).forEach((key) => {
+    const component = components[key];
+    if (component.install) {
+      app.use(component);
+    }
+  });
+
+  return app;
 };
 
-export default MyKitPlugin;
-
-export * from './Button';
+export default {
+  install,
+};
