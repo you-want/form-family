@@ -1,10 +1,19 @@
 {
   "name": "you-want-vue3",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "vue3 组件解决方案",
-  "main": "lib/you-want-vue3.es.js",
-  "type": "module",
-  "typings": "",
+  "main": "lib/you-want-vue3.umd.js",
+  "files": [
+    "lib"
+  ],
+  "module": "./lib/you-want-vue3.es.js",
+  "typings": "lib/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./lib/you-want-vue3.es.js",
+      "require": "./lit/you-want-vue3.umd.js"
+    }
+  },
   "keyword": [
     "vue",
     "vue3",
@@ -44,6 +53,7 @@
     "unplugin-auto-import": "^0.7.1",
     "unplugin-vue-components": "^0.19.3",
     "vite": "^2.9.5",
+    "vite-plugin-dts": "^1.1.1",
     "vite-plugin-inspect": "^0.5.0",
     "vite-plugin-vue-setup-extend": "^0.4.0",
     "vue-tsc": "^0.34.7"
