@@ -15,7 +15,7 @@ const { defineConfig, build } = require('vite');
 // vite 插件
 const vue = require('@vitejs/plugin-vue');
 const vueJsx = require('@vitejs/plugin-vue-jsx');
-const AutoImport = require("unplugin-auto-import/vite")
+// const AutoImport = require("unplugin-auto-import/vite")
 const Components = require('unplugin-vue-components/vite')
 const { AntDesignVueResolver } = require('unplugin-vue-components/resolvers')
 
@@ -31,10 +31,10 @@ const baseConfig = defineConfig({
   plugins: [
     vue(),
     vueJsx(),
-    AutoImport({
-      imports: ["vue"], // 自动导入vue和vue-router相关函数
-      // dts: "lib/auto-import.d.ts" // 生成 `auto-import.d.ts` 全局声明
-    }),
+    // AutoImport({
+    //   imports: ["vue"], // 自动导入vue和vue-router相关函数
+    //   dts: "lib/auto-import.d.ts" // 生成 `auto-import.d.ts` 全局声明
+    // }),
     Components({
       resolvers: [AntDesignVueResolver()],
       dts: true,

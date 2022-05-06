@@ -4,6 +4,19 @@ import type {
   ExtractPropTypes,
   PropType,
 } from "vue";
+import {
+  defineComponent,
+  ref,
+  reactive,
+  h,
+  resolveComponent,
+  watch,
+  onMounted,
+  getCurrentInstance,
+  computed,
+  onUnmounted,
+  onUpdated,
+} from "vue";
 import { YSearchForm, YTable } from "../index";
 import { withInstall } from "../_util/type";
 import Styles from "./index.module.less";
